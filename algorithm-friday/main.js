@@ -54,8 +54,8 @@
 // console.log(path)
 
 // one basically like mine, but much more elegant
-// let numRows = 10;
-// let numCols = 10;
+// let numRows = 20;
+// let numCols = 20;
 // let matrix = [];
 // for (let row = 0; row < numRows; row++){
 //   matrix.push([]);
@@ -73,8 +73,8 @@
 let highestPalendrome = 0
 let factor1
 let factor2
-for (let i=999;i>100;i--){
-    for (let j=i;j>100;j--){
+for (let i=999;i>900;i--){
+    for (let j=i;j>900;j--){
         let product = i*j
         let productStr = product.toString()
         if (productStr === reverseStr(productStr)){
@@ -91,5 +91,4 @@ function reverseStr (arg){
     let reversed=arr.reverse()
     return reversed.join('')
 }
-console.log(highestPalendrome)
-console.log(factor1, factor2)
+console.log(highestPalendrome, factor1, factor2)
