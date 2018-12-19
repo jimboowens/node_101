@@ -42,7 +42,7 @@ createBoard(size)
 console.log(`the solution for ${size-1} is ${array[size-1][size-1]}`)
 array.forEach(row => console.log(row));
 
-one super elegant solution that's basically the N!/R!(N-R)!
+// one super elegant solution that's basically the N!/R!(N-R)!
 const grid = 20;
 var path = 1;
 
@@ -53,7 +53,7 @@ for (i = 0; i < grid; i++) {
 
 console.log(path)
 
-one basically like mine, but much more elegant
+// one basically like mine, but much more elegant
 let numRows = 20;
 let numCols = 20;
 let matrix = [];
