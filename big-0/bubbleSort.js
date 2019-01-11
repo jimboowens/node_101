@@ -36,7 +36,7 @@
 
 
 ////////////////no onto bubble sort
-let array = [5,6,4,3,2,1]
+let array = [5,6,4, 543, 234, 75773, 34,3,2,1]
 
 let sorted = false
 console.log('sanity check')
@@ -47,28 +47,21 @@ function bubbleSort (array){
         let placeholder = 0
         let swap = 0
         for (i=0; i<array.length; i++){
-            console.log('sanity check again')
             if (i === array.length-k){
                 if (swap === 0){
-                    console.log('swap triggered')
                     sorted = true
                 }
-                console.log('far enough')
                 console.log(i,k)
                 break
             }
             if (array[i]>array[i+1]){
-                console.log('if statement was triggered')
                 placeholder = array[i] 
                 array[i] = array[i+1]
                 array[i+1]= placeholder
                 swap++
-                console.log(array)
             }
-            console.log(swap)
         }
         k++
-        console.log(sorted)
     }
 }
 
