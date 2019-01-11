@@ -51,7 +51,6 @@ function bubbleSort (array){
                 if (swap === 0){
                     sorted = true
                 }
-                console.log(i,k)
                 break
             }
             if (array[i]>array[i+1]){
