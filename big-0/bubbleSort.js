@@ -1,40 +1,3 @@
-// // bubblesort
-// let counter = 0
-// let found = false
-// function binarySearch(list, value){
-//     // we shall set a range, or bound, to check. This will get smaller as we guess.
-//     let bottom = 0
-//     let top = list.length-1
-//     let middle = Math.floor((top+bottom)/2)
-//     // console.log(bottom, middle, top)
-//     while(!found){
-//         if (value<list[middle]){
-//             top = middle - 1
-//         }else if (value >list[middle]){
-//             bottom = middle+1
-//         }else{
-//             console.log(`found! Secret number was ${value} and it took ${counter} tries`)
-//             found = true
-//         }
-//         middle = Math.floor((top+bottom)/2)
-//         counter++
-//     }
-// }
-
-
-
-
-//     let numbers = []
-//     for (let i=0;i<3089089;i++){
-//         numbers.push(i)
-//     }
-    
-
-// let number = Math.ceil(numbers.length*Math.random())
-// console.log (number)
-// binarySearch(numbers,number)
-
-
 ////////////////now onto bubble sort
 const freshArray = createObject(10000)
 shuffleObject(freshArray, freshArray.length)
@@ -52,9 +15,9 @@ function shuffleObject(object, length) {
     for (let i=0; i<length*10; i++){
         let rand1 = Math.floor(Math.random()*length)
         let rand2 = Math.floor(Math.random()*length)
-        let cardHolder = object[rand1]
+        let placeHolder = object[rand1]
         object[rand1]=object[rand2]
-        object[rand2]= cardHolder 
+        object[rand2]= placeHolder 
     }
 }
 
