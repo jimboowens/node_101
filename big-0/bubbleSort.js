@@ -36,9 +36,27 @@
 
 
 ////////////////now onto bubble sort
-let array = [5,32,64,53,7453,6,4,3,2,1]
+const freshArray = createObject(10000)
+shuffleObject(freshArray, freshArray.length)
 let sorted = false
 let k=0
+
+function createObject(length){
+    let newObject = []
+    for (i=0;i<length;i++){
+        newObject.push(i)
+    }
+    return newObject
+}
+function shuffleObject(object, length) {
+    for (let i=0; i<length*10; i++){
+        let rand1 = Math.floor(Math.random()*length)
+        let rand2 = Math.floor(Math.random()*length)
+        let cardHolder = object[rand1]
+        object[rand1]=object[rand2]
+        object[rand2]= cardHolder 
+    }
+}
 
 function checkSort(counterOfSwaps, numberOfIterations, lengthOfArray){
     if (numberOfIterations === lengthOfArray-1){
@@ -66,5 +84,4 @@ function bubbleSort (array){
    }
 }
 
-bubbleSort(array)
-console.log(array)
+bubbleSort(freshArray)
