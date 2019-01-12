@@ -35,33 +35,35 @@
 // binarySearch(numbers,number)
 
 
-////////////////no onto bubble sort
-let array = [5,6,4, 543, 234, 75773, 34,3,2,1]
-
+////////////////now onto bubble sort
+let array = [5,32,64,53,7453,6,4,3,2,1]
 let sorted = false
-console.log('sanity check')
 let k=0
 
-function bubbleSort (array){
-    while (!sorted){
-        let placeholder = 0
-        let swap = 0
-        for (i=0; i<array.length; i++){
-            if (i === array.length-k){
-                if (swap === 0){
-                    sorted = true
-                }
-                break
-            }
-            if (array[i]>array[i+1]){
-                placeholder = array[i] 
-                array[i] = array[i+1]
-                array[i+1]= placeholder
-                swap++
-            }
+function checkSort(counterOfSwaps, numberOfIterations, lengthOfArray){
+    if (numberOfIterations === lengthOfArray-1){
+        if (counterOfSwaps === 0){
+            sorted = true
         }
-        k++
     }
+}
+
+function bubbleSort (array){
+   while (!sorted){
+       let placeholder = 0
+       let swap = 0
+       let numUnsorted = array.length-k
+       for (i=0; i<numUnsorted; i++){
+            checkSort(swap, i, numUnsorted)
+           if (array[i]>array[i+1]){
+               placeholder = array[i]
+               array[i] = array[i+1]
+               array[i+1]= placeholder
+               swap++
+           }
+       }
+       k++
+   }
 }
 
 bubbleSort(array)
